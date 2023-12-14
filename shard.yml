@@ -1,0 +1,23 @@
+name: pingasius
+version: 0.1.0
+
+authors:
+  - Michael Pirogov <vbnet.ru@gmail.com>
+
+targets:
+  pingasius:
+    main: src/pingasius.cr
+
+crystal: 1.10.1
+
+license: MIT
+dependencies:
+  tourmaline:
+    github: protoncr/tourmaline
+    branch: master
+  validator:
+      github: nicolab/crystal-validator
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 1.5.0
