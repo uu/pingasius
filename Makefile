@@ -14,5 +14,7 @@ strip:
 	strip bin/pingasius
 run:
 	crystal run src/pingasius.cr
+docker:
+	docker buildx build --tag userunknowned/pingasius:0.1.0 --tag userunknowned/pingasius:latest .
 test: shards-devel
 	./bin/ameba

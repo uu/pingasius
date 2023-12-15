@@ -6,7 +6,7 @@ Tools for network via telegram
 
 ### Docker
 
-`docker run --env BOT_TOKEN=<your_token> ... `
+`docker run --env BOT_TOKEN=<your_token> --name pingasius userunknowned/pingasius`
 
 ## Contributing
 
