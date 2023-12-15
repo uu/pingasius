@@ -1,3 +1,6 @@
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/uu/pingasius/crystal.yml)
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/uu/pingasius)
+
 # Pingasius - ping and nettools telegram bot
 
 Tools for network via telegram

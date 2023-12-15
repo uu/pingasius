@@ -4,7 +4,6 @@ require "validator"
 
 module Pingasius
   class Settings
-    property bot_token = "bot token"
     property admin_id = "0"
     property? debug = false
   end

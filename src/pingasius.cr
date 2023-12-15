@@ -42,7 +42,6 @@ module Pingasius
     nmap_handler = Tourmaline::CommandHandler.new("nmap") do |ctx|
       text = ctx.text.to_s.split(" ")
       host, port = text[0], text[1]
-      # port = text[1]
       if is :number?, port
         to_reply = agent.do_nmap(host, port.to_i)
       else
