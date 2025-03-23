@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.5.0
+    version: 1.6.4
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
@@ -10,7 +10,7 @@ shards:
 
   http_proxy:
     git: https://github.com/mamantoha/http_proxy.git
-    version: 0.10.1+git.commit.98ed90f82c02f2870e326b63974cb582f99ceddd
+    version: 0.13.0+git.commit.a347f738c2233a4cea8e486990d80577b8b634f0
 
   prop:
     git: https://github.com/nicolab/crystal-prop.git

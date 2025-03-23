@@ -15,23 +15,23 @@ module Pingasius
     def initialize
       @settings = Settings.new
 
-      OptionParser.parse do |p|
-        p.banner = "pingasius [-d] [-a admin_id]"
+      OptionParser.parse do |opt|
+        opt.banner = "pingasius [-d] [-a admin_id]"
 
-        p.on("-a admin_id", "Admin id") do |admin_id|
+        opt.on("-a admin_id", "Admin id") do |admin_id|
           @settings.admin_id = admin_id
         end
 
-        p.on("-d", "If set, debug messages will be shown.") do
+        opt.on("-d", "If set, debug messages will be shown.") do
           @settings.debug = true
         end
 
-        p.on("-h", "--help", "Displays this message.") do
-          puts p
+        opt.on("-h", "--help", "Displays this message.") do
+          puts opt
           exit
         end
 
-        p.on("-v", "--version", "Displays version.") do
+        opt.on("-v", "--version", "Displays version.") do
           puts VERSION
           exit
         end

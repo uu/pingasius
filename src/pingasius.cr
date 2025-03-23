@@ -1,11 +1,11 @@
-require "log"
-require "./tools/*"
 require "./agent"
+require "./tools/*"
+require "log"
 require "tourmaline"
 require "validator/is"
 
 module Pingasius
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
   Log     = ::Log.for("main")
 
   class Daemon
@@ -51,7 +51,15 @@ module Pingasius
       ctx.reply(to_reply) unless to_reply.nil?
     end
 
-    client.register(echo_handler, ping_handler, host_handler, whois_handler, nmap_handler)
+    dig_handler = Tourmaline::CommandHandler.new("dig") do |ctx|
+      text = ctx.text.to_s.split(" ")
+      host, type = text[0], text[1]
+      type = "A" if type.empty?
+      to_reply = agent.do_dig(host, type)
+      ctx.reply(to_reply) unless to_reply.nil?
+    end
+
+    client.register(echo_handler, ping_handler, host_handler, whois_handler, nmap_handler, dig_handler)
 
     client.poll
   end

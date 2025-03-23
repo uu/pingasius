@@ -1,5 +1,5 @@
 name: pingasius
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Michael Pirogov <vbnet.ru@gmail.com>
@@ -8,7 +8,7 @@ targets:
   pingasius:
     main: src/pingasius.cr
 
-crystal: 1.10.1
+crystal: 1.15.1
 
 license: MIT
 dependencies:
@@ -20,4 +20,4 @@ dependencies:
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 1.5.0
+    version: ~> 1.6.4
